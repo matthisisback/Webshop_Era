@@ -1,0 +1,32 @@
+body {
+    background-color: rgba(36, 36, 35, 1);
+    color: rgba(255, 255, 255, 1);
+}
+nav {
+    background-color: rgba(51, 53, 51, 1);
+    margin: 0;
+    border-radius: 20px;
+    position: fixed;
+    display: flex;
+    height: 120px;
+    width: 95%;
+    margin-left: 2.5%;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0;
+}
+ul li {
+    color: rgba(232, 237, 223, 1);
+    list-style: none;
+    margin-left: 56px;
+    font-family: "Inria Serif", Serif;
+    font-size: 32px ;
+
+}
+nav img {
+    height: 136px;
+    width: 143px;
+}
