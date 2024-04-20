@@ -1,6 +1,10 @@
 body {
     background-color: rgba(36, 36, 35, 1);
     color: rgba(255, 255, 255, 1);
+    background-image: url("Code/img/Background image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 nav {
     background-color: rgba(51, 53, 51, 1);
@@ -29,4 +33,42 @@ ul li {
 nav img {
     height: 136px;
     width: 143px;
+}
+.carrousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image {
+    flex: 0 0 100%;
+}
+
+.active {
+    filter: brightness(1);
+}
+
+.image:not(.active) {
+    filter: brightness(0.7);
+}
+
+.fleche {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.fleche:hover {
+    font-size: 28px;
 }
