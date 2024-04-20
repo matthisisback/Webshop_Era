@@ -1,10 +1,7 @@
 body {
     background-color: rgba(36, 36, 35, 1);
     color: rgba(255, 255, 255, 1);
-    background-image: url("Code/img/Background image.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    font-family: "Inria Serif", serif;
 }
 nav {
     background-color: rgba(51, 53, 51, 1);
@@ -12,28 +9,84 @@ nav {
     border-radius: 20px;
     position: fixed;
     display: flex;
-    height: 120px;
-    width: 95%;
-    margin-left: 2.5%;
+    align-items: center;
+    height: 110px;
+    width: 97%;
+    padding-left: 20px;
+    margin-left: 0.7%;
+    border-bottom: 5px solid rgba(245, 203, 92, 1);
+}
+a {
+    text-decoration: none;
+    color: inherit;
 }
 nav ul {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     padding: 0;
+    margin-left: auto;
 }
+
 ul li {
     color: rgba(232, 237, 223, 1);
     list-style: none;
-    margin-left: 56px;
-    font-family: "Inria Serif", Serif;
-    font-size: 32px ;
+    margin-left: 20px;
+    font-size: 32px;
+    margin-right: 4.5%;
+    transition: color 0.3s;
+}
 
+ul li:hover {
+    color: rgba(150, 150, 150, 1);
 }
 nav img {
     height: 136px;
     width: 143px;
 }
+#Welcome{
+    margin-top: 25%;
+    position: absolute;
+    top: 0;
+    left: 55px;
+    max-width: calc(100% - 55px);
+    font-size: 3em;
+    font-weight: bold;
+}
+.text_main_page{
+    margin-top: 35%;
+    position: absolute;
+    top: 0;
+    left: 33px;
+    right: 33px;
+    text-align: center;
+    max-width: calc(100% - 10px);
+    font-size: 1.3em;
+}
+#b_carrousel{
+    margin-top: 48%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#Background_image{
+    position: absolute;
+    z-index: -1;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    top: 19%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0.5;
+}
+
+
+/*
 .carrousel {
     position: relative;
     overflow: hidden;
@@ -72,3 +125,4 @@ nav img {
 .fleche:hover {
     font-size: 28px;
 }
+*/
