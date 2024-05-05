@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap">
     <title>Home page</title>
     <link rel="stylesheet" href="Css/Style.css">
-    <script src="Js/Carrousel.js"></script>
 </head>
 <body>
     <header>
@@ -25,23 +24,15 @@
         <h1 id="Welcome">Welcome,</h1>
         <p class="text_main_page">Welcome to our enchanted place, where tales of valor and adventure come to life through our meticulously crafted characters and immersive dungeon scenarios straight out of the realm of dragons and dungeons!</p>
         <p class="text_main_page" id="b_carrousel">Preview some of our character :</p>
+        <div class="carousel-container">
+            <img class="carousel-slide"id="carouselImage" src="img/Flopin.jpg" alt="Flopin">
+            <button class="prev-btn">&lt;</button>
+            <button class="next-btn">&gt;</button>
         </div>
-        <div class="image_fullscreen"></div>
-        <img id="Background_image" src="img/Background%20image.jpg">
-        <div>
-        <!--
-        <div class="carrousel">
-            <div class="images">
-                <div class="image active"><img src="img/Flopin.jpg" alt="Character 1"></div>
-                <div class="image"><img src="img/Udyr.jpg" alt="Character 2"></div>
-                <div class="image"><img src="img/Hao.jpg" alt="Character 3"></div>
-            </div>
-            <div class="fleche gauche">&lt;</div>
-            <div class="fleche droite">&gt;</div>
-
-            <img src="img/shopping-cart.png">
+        <div class="image_fullscreen">
+            <img id="Background_image" src="img/Background%20image.jpg">
         </div>
     </main>
+    <script src="Js/Carrousel.js"></script>
 </body>
 </html>
-    -->

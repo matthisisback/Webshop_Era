@@ -15,6 +15,7 @@ nav {
     padding-left: 20px;
     margin-left: 0.7%;
     border-bottom: 5px solid rgba(245, 203, 92, 1);
+    z-index: 1000;
 }
 a {
     text-decoration: none;
@@ -85,44 +86,45 @@ nav img {
     opacity: 0.5;
 }
 
-
-/*
-.carrousel {
-    position: relative;
+/**********************************************/
+.carousel-container {
     overflow: hidden;
+    width: 32%;
+    margin: 56% auto 0 33%;
+    position: absolute;
 }
 
-.images {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+.carousel-slide{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.image {
-    flex: 0 0 100%;
-}
-
-.active {
-    filter: brightness(1);
-}
-
-.image:not(.active) {
-    filter: brightness(0.7);
-}
-
-.fleche {
+.prev-btn,
+.next-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    border: none;
+    padding: 10px;
+    font-size: 22px;
     cursor: pointer;
-    font-size: 24px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    z-index: 1;
 }
 
-.fleche:hover {
-    font-size: 28px;
+.prev-btn {
+    left: 0;
 }
-*/
+
+.next-btn {
+    right: 0;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+    font-size: 32px;
+    transition: 0.5s;
+}
