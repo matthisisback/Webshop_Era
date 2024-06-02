@@ -21,7 +21,23 @@
         </nav>
     </header>
     <main>
-        <h1>Get in touch</h1>
+        <div class="container pt-5">
+            <div class="pt-4 pb-5"></div>
+            <h1 class="text-center mb-4 pt-4 pb-5">Let's get in touch</h1>
+            <form id="contactForm">
+                <div class="form-group text-center pb-4">
+                    <label for="inputName" class="pb-3 h4">Your name</label>
+                    <input type="text" id="inputName" class="form-control w-75 mx-auto" placeholder="Your name" required>
+                </div>
+                <div class="form-group text-center pb-5">
+                    <label for="inputMessage" class="pb-3 h4">Message</label>
+                    <textarea id="inputMessage" class="form-control w-75 mx-auto" rows="4" placeholder="Your message" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg mt-3">Send</button>
+                </div>
+
+            </form>
+        </div>
     </main>
 </body>
-</html>
