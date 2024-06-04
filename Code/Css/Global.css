@@ -45,6 +45,12 @@ nav img {
     height: 136px;
     width: 143px;
 }
+.shopping-cart {
+    height: 56px; /* Ajustez selon vos besoins */
+    width: 56px; /* Ajustez selon vos besoins */
+    margin-right: 10px;
+    margin-left: 10%;
+}
 #Welcome{
     margin-top: 25%;
     position: absolute;
