@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || {};
-    const paymentList = document.querySelector(".payment-list");
-    const totalPriceElement = document.querySelector(".total-price");
-    const addButtons = document.querySelectorAll(".add-button");
-    const removeButtons = document.querySelectorAll(".remove-button");
-    const deleteButton = document.querySelector(".delete-button");
+    let cartItems = JSON.parse(sessionStorage.getItem("cartItems"));
+    if (!cartItems || typeof cartItems !== "object") {
+        cartItems = {};
+    }
+    let paymentList = document.querySelector(".payment-list");
+    let totalPriceElement = document.querySelector(".total-price");
+    let payButton = document.querySelector(".pay-button");
 
     renderPayment();
 
@@ -16,10 +17,17 @@ document.addEventListener("DOMContentLoaded", function() {
         Object.keys(cartItems).forEach(itemName => {
             const itemQuantity = cartItems[itemName].quantity;
             const itemPrice = cartItems[itemName].price;
-            const totalItemPrice = itemQuantity * itemPrice;
+            let totalItemPrice = itemQuantity * itemPrice;
+
+            // Vérifie si une réduction s'applique
+            if (itemQuantity >= 8 && itemQuantity < 16) {
+                totalItemPrice *= 0.92; // Applique une réduction de 8%
+            } else if (itemQuantity >= 16) {
+                totalItemPrice *= 0.84; // Applique une réduction de 16%
+            }
 
             const paymentItem = document.createElement("li");
-            paymentItem.textContent = `${itemName} - Quantity: ${itemQuantity} - Price per item: ${itemPrice.toFixed(2)}€ - Total: ${totalItemPrice.toFixed(2)}€`;
+            paymentItem.textContent = `${itemName} - Quantity: ${itemQuantity} - Total Price: ${totalItemPrice.toFixed(2)}€`;
 
             const addButton = document.createElement("button");
             addButton.textContent = "+";
@@ -54,14 +62,15 @@ document.addEventListener("DOMContentLoaded", function() {
         totalPriceElement.textContent = `Total Price: ${totalPrice.toFixed(2)}€`;
 
         if (Object.keys(cartItems).length === 0) {
-            deleteButton.style.display = "none";
+            payButton.style.display = "none";
         } else {
-            deleteButton.style.display = "block";
+            payButton.style.display = "block";
         }
     }
 
-    deleteButton.addEventListener("click", function() {
-        sessionStorage.removeItem("cartItems");
-        renderPayment();
+    payButton.addEventListener("click", function() {
+        // Ajoutez ici la logique pour le paiement
+        // Par exemple, rediriger l'utilisateur vers une page de paiement ou effectuer une action de paiement
+        alert("Payment completed successfully!");
     });
 });

@@ -17,12 +17,14 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function(event) {
             event.preventDefault();
             const itemName = button.getAttribute("data-name");
+            const itemPrice = parseFloat(button.getAttribute("data-price"));
 
             if (cartItems[itemName]) {
                 cartItems[itemName].quantity++;
             } else {
                 cartItems[itemName] = {
-                    quantity: 1
+                    quantity: 1,
+                    price: itemPrice
                 };
             }
 
