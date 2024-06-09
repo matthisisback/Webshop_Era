@@ -1,0 +1,58 @@
+body {
+    background-color: rgba(36, 36, 35, 1);
+    color: rgba(255, 255, 255, 1);
+    font-family: "Inria Serif", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    background-color: rgba(51, 53, 51, 1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.payment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.payment-list li {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.total-price {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 20px;
+    color: rgba(245, 203, 92, 1);
+}
+
+.add-button,
+.remove-button,
+.delete-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.add-button:hover,
+.remove-button:hover,
+.delete-button:hover {
+    background-color: #0056b3;
+}
+main

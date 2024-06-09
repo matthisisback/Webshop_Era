@@ -2,9 +2,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const cartToggle = document.querySelector(".nav-link.cart-toggle");
     const cartDropdown = document.querySelector(".cart-dropdown");
     const addToCartButtons = document.querySelectorAll(".add-to-cart");
-    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || {}; // Charger le contenu du panier depuis le stockage local ou initialiser un objet vide
+    const cartCountElement = document.querySelector(".cart-count");
+    let cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || {};
 
-    renderCart(); // Appeler la fonction pour afficher le panier dès que le DOM est chargé
+    renderCart();
+    updateCartCount();
 
     cartToggle.addEventListener("click", function(event) {
         event.preventDefault();
@@ -17,15 +19,16 @@ document.addEventListener("DOMContentLoaded", function() {
             const itemName = button.getAttribute("data-name");
 
             if (cartItems[itemName]) {
-                // Si l'article existe déjà dans le panier, mettez à jour la quantité
-                cartItems[itemName]++;
+                cartItems[itemName].quantity++;
             } else {
-                // Si l'article n'existe pas encore dans le panier, ajoutez-le avec une quantité de 1
-                cartItems[itemName] = 1;
+                cartItems[itemName] = {
+                    quantity: 1
+                };
             }
-            // Mettre à jour le contenu du panier dans le stockage local
-            localStorage.setItem("cartItems", JSON.stringify(cartItems));
-            renderCart(); // Réafficher le panier avec les modifications apportées
+
+            sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
+            renderCart();
+            updateCartCount();
         });
     });
 
@@ -33,28 +36,26 @@ document.addEventListener("DOMContentLoaded", function() {
         if (event.target.classList.contains("delete-button")) {
             const itemName = event.target.parentElement.querySelector("span").textContent.split(" - ")[0];
             delete cartItems[itemName];
-            // Mettre à jour le contenu du panier dans le stockage local après la suppression
-            localStorage.setItem("cartItems", JSON.stringify(cartItems));
-            renderCart(); // Réafficher le panier avec les modifications apportées
+            sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
+            renderCart();
+            updateCartCount();
         }
     });
 
     function renderCart() {
-        // Effacer le contenu actuel du panier
         cartDropdown.innerHTML = "";
 
-        // Ajouter chaque article avec sa quantité non nulle au panier
         Object.keys(cartItems).forEach(itemName => {
-            if (cartItems[itemName] !== null) { // Vérifier si la quantité n'est pas nulle
+            if (cartItems[itemName].quantity !== null) {
                 const cartItem = document.createElement("div");
                 cartItem.classList.add("cart-item");
 
-                // Nom de l'article avec sa quantité
+                const itemQuantity = cartItems[itemName].quantity;
+
                 const itemNameElement = document.createElement("span");
-                itemNameElement.textContent = `${itemName} - x${cartItems[itemName]}`;
+                itemNameElement.textContent = `${itemName} - Quantity: ${itemQuantity}`;
                 cartItem.appendChild(itemNameElement);
 
-                // Bouton de suppression
                 const deleteButton = document.createElement("button");
                 deleteButton.textContent = "Delete";
                 deleteButton.classList.add("delete-button");
@@ -64,12 +65,15 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-        // Ajouter le bouton "Checkout" en bas du panier
         const checkoutButton = document.createElement("a");
         checkoutButton.classList.add("dropdown-item", "checkout-button");
         checkoutButton.href = "payment.html";
         checkoutButton.textContent = "Checkout";
         cartDropdown.appendChild(checkoutButton);
     }
-});
 
+    function updateCartCount() {
+        const itemCount = Object.values(cartItems).reduce((sum, item) => sum + (item.quantity || 0), 0);
+        cartCountElement.textContent = itemCount;
+    }
+});

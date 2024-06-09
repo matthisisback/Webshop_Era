@@ -82,7 +82,22 @@ nav img {
 .cart-dropdown .dropdown-divider {
     border-top: 1px solid rgba(245, 203, 92, 1);
 }
-
+.cart-count {
+    background-color: rgba(245, 203, 92, 1); /* Couleur de fond du cercle */
+    color: rgba(0, 0, 0, 1); /* Couleur du texte */
+    border-radius: 50%; /* Pour un cercle parfait */
+    padding: 5px 10px; /* Ajustez selon vos besoins */
+    font-size: 16px; /* Ajustez selon vos besoins */
+    position: absolute; /* Positionnement absolu */
+    bottom: -10px; /* Ajustez selon vos besoins pour la position verticale */
+    left: 40px; /* Ajustez selon vos besoins pour la position horizontale */
+    display: flex; /* Centrer le texte */
+    align-items: center; /* Centrer le texte */
+    justify-content: center; /* Centrer le texte */
+    width: 24px; /* Largeur fixe pour le cercle */
+    height: 24px; /* Hauteur fixe pour le cercle */
+    text-align: center; /* Centrer le texte */
+}
 .d-none {
     display: none;
 }
