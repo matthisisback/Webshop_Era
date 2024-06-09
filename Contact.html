@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/Global.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/Logo.png" alt="Your Company Logo" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Store.html">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border_img" href="Login.html">Login</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link cart-toggle" href="#">
+                            <img src="img/shopping-cart.png" alt="Shopping Cart" class="shopping-cart">
+                        </a>
+                        <div class="cart-dropdown d-none">
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="payment.html">Checkout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container pt-5">
+            <div class="pt-4 pb-5"></div>
+            <h1 class="text-center mb-4 pt-4 pb-5">Let's get in touch</h1>
+            <form id="contactForm">
+                <div class="form-group text-center pb-4">
+                    <label for="inputName" class="pb-3 h4">Your name</label>
+                    <input type="text" id="inputName" class="form-control w-75 mx-auto" placeholder="Your name" required>
+                </div>
+                <div class="form-group text-center pb-5">
+                    <label for="inputMessage" class="pb-3 h4">Message</label>
+                    <textarea id="inputMessage" class="form-control w-75 mx-auto" rows="4" placeholder="Your message" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg mt-3">Send</button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+    <script src="Js/cart-dropdown.js"></script>
+
+</body>

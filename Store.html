@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store</title>
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/Global.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/Logo.png" alt="Your Company Logo" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="Store.html">Store</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link border_img" href="Login.html">Login</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link cart-toggle" href="#">
+                        <img src="img/shopping-cart.png" alt="Shopping Cart" class="shopping-cart">
+                    </a>
+                    <div class="cart-dropdown d-none">
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="payment.html">Checkout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- Section-->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5 pt-4">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image--><img class="card-img-top" src="img/Flopin.jpg" alt="...">
+                    <!-- Product details-->
+                    <div class="card-body p-4 custom-card-body">
+                        <div class="custom-text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Flopin</h5>
+                            <!-- Product price-->49.99€
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto add-to-cart" href="#" data-name="Flopin" data-price="49.99€">Add to cart</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem;">Best-seller</div>
+                    <!-- Product image--><img class="card-img-top" src="img/Hao.jpg" alt="...">
+                    <!-- Product details-->
+                    <div class="card-body p-4 custom-card-body">
+                        <div class="custom-text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Hao</h5>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product price--><span class="text-muted text-decoration-line-through me-1">20.00€</span>18.00€
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto add-to-cart" data-name="Hao" data-price="18.00€">Add to cart</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="img/michel.jpg" alt="...">
+                    <!-- Product details-->
+                    <div class="card-body p-4 custom-card-body">
+                        <div class="custom-text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Michel</h5>
+                            <!-- Product price-->
+                            <span class="text-muted text-decoration-line-through me-1">56€.00</span>49.99€
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a class="btn btn-outline-dark mt-auto add-to-cart" data-name="Michel" data-price="49.99€">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image--><img class="card-img-top" src="img/Udyr.jpg" alt="...">
+                    <!-- Product details-->
+                    <div class="card-body p-4 custom-card-body">
+                        <div class="custom-text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Udyr</h5>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product price--><span class="text-muted text-decoration-line-through me-1">150.00€</span>129.00€
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto add-to-cart" >Add to cart</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image--><img class="card-img-top" src="img/Büll.jpg" alt="...">
+                    <!-- Product details-->
+                    <div class="card-body p-4 custom-card-body">
+                        <div class="custom-text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Büll</h5>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product price-->15.00€
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto add-to-cart"  data-name="Büll" data-price="15.00€">Add to cart</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem;">Best-seller</div>
+                    <!-- Product image--><img class="card-img-top" src="img/Aäng.jpg" alt="...">
+                    <!-- Product details-->
+                    <div class="card-body p-4 custom-card-body">
+                        <div class="custom-text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Aäng</h5>
+                            <!-- Product price-->60.00€
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto add-to-cart" data-name="Aäng" data-price="60.00€">Add to cart</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image--><img class="card-img-top" src="img/Bönnie.jpg" alt="...">
+                    <!-- Product details-->
+                    <div class="card-body p-4 custom-card-body">
+                        <div class="custom-text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Bönnie</h5>
+                            <!-- Product price-->60.00€
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto add-to-cart" data-name="Bönnie" data-price="60.00€">Add to cart</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image--><img class="card-img-top" src="img/Petelor.jpg" alt="...">
+                    <!-- Product details-->
+                    <div class="card-body p-4 custom-card-body">
+                        <div class="custom-text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Petelor</h5>
+                            <!-- Product price-->119.99€
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto add-to-cart" data-name="Petelor" data-price="119.99€">Add to cart</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image--><img class="card-img-top" src="img/Dorros.jpg" alt="...">
+                    <!-- Product details-->
+                    <div class="card-body p-4 custom-card-body">
+                        <div class="custom-text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Dorros</h5>
+                            <!-- Product price-->29.99€
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto add-to-cart" data-name="Dorros" data-price="29.99€">Add to cart</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Sale badge-->
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem;">Best-seller</div>
+                    <!-- Product image--><img class="card-img-top" src="img/Xilnoa.jpg" alt="...">
+                    <!-- Product details-->
+                    <div class="card-body p-4 custom-card-body">
+                        <div class="custom-text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Xilnoa</h5>
+                            <!-- Product price-->5.99€
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto add-to-cart" data-name="Xilnoa" data-price="5.99€">Add to cart</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image--><img class="card-img-top" src="img/Lesaerys.jpg" alt="...">
+                    <!-- Product details-->
+                    <div class="card-body p-4 custom-card-body">
+                        <div class="custom-text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Lesaerys</h5>
+                            <!-- Product price-->89.99€
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto add-to-cart" data-name="Lesaerys" data-price="89.99€">Add to cart</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="Js/cart-dropdown.js"></script>
+</body>
+</html>
