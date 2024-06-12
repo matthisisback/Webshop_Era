@@ -17,8 +17,8 @@ const collectionName = 'users';
 const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'your-email@gmail.com',
-        pass: 'your-email-password'
+        user: 'projectdevweb111@gmail.com',
+        pass: 'DevProject10'
     }
 });
 
