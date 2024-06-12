@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const images = ["img/Flopin.jpg", "img/Hao.jpg", "img/Udyr.jpg", "img/michel.jpg"];
+    const images = ["../img/Flopin.jpg", "../img/Hao.jpg", "../img/Udyr.jpg", "../img/michel.jpg"];
     const carouselImage = document.getElementById('carouselImage');
     let currentIndex = 0;
 
