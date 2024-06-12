@@ -23,7 +23,8 @@ const transporter = nodemailer.createTransport({
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'HTML')));
+app.use('/Css', express.static(path.join(__dirname, 'Css')));
 app.use(session({
     secret: 'your-secret-key',
     resave: false,
@@ -132,4 +133,6 @@ app.get('/dashboard', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'dashboard.html'));
 });
 
-app.lis
+app.listen(port, () => {
+    console.log(`Server is running at http://localhost:${port}`);
+});
