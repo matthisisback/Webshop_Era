@@ -17,13 +17,14 @@ const collectionName = 'users';
 const transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'your-email@gmail.com',
-        pass: 'your-email-password'
+        user: 'projectdevweb111@gmail.com',
+        pass: 'DevProject10'
     }
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'HTML')));
+app.use('/Css', express.static(path.join(__dirname, 'Css')));
 app.use(session({
     secret: 'your-secret-key',
     resave: false,
@@ -132,4 +133,6 @@ app.get('/dashboard', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'dashboard.html'));
 });
 
-app.lis
+app.listen(port, () => {
+    console.log(`Server is running at http://localhost:${port}`);
+});
