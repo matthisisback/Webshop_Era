@@ -19,11 +19,10 @@ document.addEventListener("DOMContentLoaded", function() {
             const itemPrice = cartItems[itemName].price;
             let totalItemPrice = itemQuantity * itemPrice;
 
-            // Vérifie si une réduction s'applique
             if (itemQuantity >= 8 && itemQuantity < 16) {
-                totalItemPrice *= 0.92; // Applique une réduction de 8%
+                totalItemPrice *= 0.92;
             } else if (itemQuantity >= 16) {
-                totalItemPrice *= 0.84; // Applique une réduction de 16%
+                totalItemPrice *= 0.84;
             }
 
             const paymentItem = document.createElement("li");
@@ -69,8 +68,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     payButton.addEventListener("click", function() {
-        // Ajoutez ici la logique pour le paiement
-        // Par exemple, rediriger l'utilisateur vers une page de paiement ou effectuer une action de paiement
         alert("Payment completed successfully!");
     });
 });

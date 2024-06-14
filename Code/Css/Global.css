@@ -4,10 +4,10 @@ body {
     font-family: "Inria Serif", serif;
 }
 nav {
-    position: fixed; /* Changement : position fixée */
-    top: 0; /* Changement : alignement en haut de la page */
-    left: 0; /* Changement : alignement sur la gauche */
-    width: 100%; /* Changement : largeur de 100% pour occuper toute la largeur de la page */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
     background-color: rgba(51, 53, 51, 1);
     margin: 0;
@@ -48,26 +48,26 @@ nav img {
     width: 143px;
 }
 .shopping-cart {
-    height: 56px; /* Ajustez selon vos besoins */
-    width: 56px; /* Ajustez selon vos besoins */
+    height: 56px;
+    width: 56px;
     margin-right: 10px;
     margin-left: 10%;
 }
 .cart-dropdown {
     position: absolute;
-    top: 110px; /* Ajustez selon la hauteur de la navbar */
-    right: 20px; /* Ajustez selon vos besoins */
+    top: 110px;
+    right: 20px;
     background-color: rgba(51, 53, 51, 1);
     border: 1px solid rgba(245, 203, 92, 1);
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 250px; /* Ajustez selon vos besoins */
-    height: 200px; /* Fixe la hauteur à 200px */
+    width: 250px;
+    height: 200px;
     z-index: 1000;
-    overflow-y: auto; /* Pour rendre le contenu défilant si nécessaire */
+    overflow-y: auto;
 }
 .cart-item {
-    font-size: 20px; /* Définissez la taille de la police souhaitée */
+    font-size: 20px;
 }
 .cart-dropdown .dropdown-item {
     color: rgba(232, 237, 223, 1);
@@ -83,37 +83,37 @@ nav img {
     border-top: 1px solid rgba(245, 203, 92, 1);
 }
 .cart-count {
-    background-color: rgba(245, 203, 92, 1); /* Couleur de fond du cercle */
-    color: rgba(0, 0, 0, 1); /* Couleur du texte */
-    border-radius: 50%; /* Pour un cercle parfait */
-    padding: 5px 10px; /* Ajustez selon vos besoins */
-    font-size: 16px; /* Ajustez selon vos besoins */
-    position: absolute; /* Positionnement absolu */
-    bottom: -10px; /* Ajustez selon vos besoins pour la position verticale */
-    left: 40px; /* Ajustez selon vos besoins pour la position horizontale */
-    display: flex; /* Centrer le texte */
-    align-items: center; /* Centrer le texte */
-    justify-content: center; /* Centrer le texte */
-    width: 24px; /* Largeur fixe pour le cercle */
-    height: 24px; /* Hauteur fixe pour le cercle */
-    text-align: center; /* Centrer le texte */
+    background-color: rgba(245, 203, 92, 1);
+    color: rgba(0, 0, 0, 1);
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 16px;
+    position: absolute;
+    bottom: -10px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    text-align: center;
 }
 .d-none {
     display: none;
 }
 .delete-button {
-    margin-left: 10px; /* Décalage vers la droite */
-    border-radius: 5px; /* Bordures arrondies */
-    padding: 5px 10px; /* Ajoute un peu d'espace autour du texte */
-    background-color: #dc3545; /* Couleur de fond rouge */
-    color: #fff; /* Couleur du texte blanc */
-    border: none; /* Supprime les bordures */
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
     margin-top: 5px;
-    cursor: pointer; /* Curseur de souris de type pointeur */
+    cursor: pointer;
 }
 
 .delete-button:hover {
-    background-color: #c82333; /* Couleur de fond rouge plus foncée au survol */
+    background-color: #c82333;
 }
 #Welcome{
     margin-top: 25%;
@@ -156,7 +156,6 @@ nav img {
     opacity: 0.5;
 }
 
-/**********************************************/
 .carousel-container {
     overflow: hidden;
     width: 32%;
